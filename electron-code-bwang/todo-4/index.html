@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Magic Todo List</h1>
+        <div id="level-info">
+            <span id="sprite">🔮</span>
+            <span id="title">Apprentice</span>
+            <span> | </span>
+            <span id="progress">Credits to next level: 0</span>
+        </div>
+        <input type="text" id="new-task" placeholder="Enter new task">
+        <select id="priority">
+            <option value="low">Low Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="high">High Priority</option>
+        </select>
+        <button id="add-button">Add Task</button>
+        <input type="checkbox" id="recurring-task"> Recurring
+        <ul id="task-list"></ul>
+        <div id="credits">Credits: 0</div>
+        <div id="store">
+            <h2>Magic Store</h2>
+            <button id="power-up-low">Power-up Low (10 Credits)</button>
+            <button id="power-up-medium">Power-up Medium (20 Credits)</button>
+            <button id="power-up-high">Power-up High (30 Credits)</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
