@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #taskInput {
+        /* Set width of input */
+        width: 200px;
+      }
+
+      body {
+        /* Set height to 100% of viewport height */
+        height: 100vh;
+        /* Set background color */
+        background-color: #f4f4f4;
+        /* Set font type */
+        font-family: Poppins;
+      }
+
+      button {
+        /* Set background color */
+        background-color: #5cb85c;
+        /* Set text color */
+        color: white;
+      }
+      
+      li {
+        /* Set background color */
+        background-color: #e0e0e0;
+      }
+    </style>
+    <script>
+      function addTask() {
+        // Get the value of the input field
+        let taskInput = document.getElementById("taskInput").value;
+
+        // Find the unordered list where tasks are displayed
+        let taskList = document.getElementById("taskList");
+
+        // Create a new list item element
+        let newTask = document.createElement("li");
+
+        // Set the text of the new task to the input value
+        newTask.innerText = taskInput;
+
+        // Add the new task to the task list
+        taskList.appendChild(newTask);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>My To-Do App</h1>
+      <h2>Tasks</h2>
+      <ul id="taskList">
+        <li>Sample Task 1</li>
+        <li>Sample Task 2</li>
+        <li>Sample Task 3</li>
+      </ul>
+      <input type="text" id="taskInput" placeholder="New Task" />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+  </body>
+</html>

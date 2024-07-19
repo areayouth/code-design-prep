@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #taskInput {
+        /* Set width of input */
+        width: 200px;
+        /* Set padding and margin */
+        padding: 10px;
+        margin-top: 10px;
+        /* Set border style */
+        border: 1px solid #ccc;
+      }
+
+      body {
+        /* Set height to 100% of viewport height */
+        height: 100vh;
+        /* Set background color */
+        background-color: #f4f4f4;
+        /* Set font type */
+        font-family: Poppins;
+        /* Choose display mode */
+        display: flex;
+        /* Center vertically */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Remove default margin and padding */
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        /*  Set background color */
+        background-color: #fff;
+        /* Center text horizontally */
+        text-align: center;
+        /* Set padding */
+        padding: 20px;
+        /* Make the corners round */
+        border-radius: 8px;
+      }
+
+      button {
+        /* Set background color */
+        background-color: #5cb85c;
+        /* Set text color */
+        color: white;
+        /* Set padding */
+        padding: 10px 15px;
+        /* Disable border */
+        border: none;
+      }
+
+      li {
+        /* Set background color */
+        background-color: #e0e0e0;
+        /* Set spacing */
+        padding: 10px;
+        margin: 5px 0;
+      }
+    </style>
+    <script>
+      function addTask() {
+        // Get the value of the input field
+        let taskInput = document.getElementById("taskInput").value;
+
+        // Find the unordered list where tasks are displayed
+        let taskList = document.getElementById("taskList");
+
+        // Create a new list item element
+        let newTask = document.createElement("li");
+
+        // Set the text of the new task to the input value
+        newTask.innerText = taskInput;
+
+        // Add the new task to the task list
+        taskList.appendChild(newTask);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My To-Do App</h1>
+      <h2>Tasks</h2>
+      <ul id="taskList">
+        <li>Sample Task 1</li>
+        <li>Sample Task 2</li>
+        <li>Sample Task 3</li>
+      </ul>
+      <input type="text" id="taskInput" placeholder="New Task" />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+  </body>
+</html>
